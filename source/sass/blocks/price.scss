@@ -1,0 +1,304 @@
+.price {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.price__delimiter {
+  margin-bottom: 30px;
+}
+
+.price__title {
+  @include clean;
+  margin-bottom: 54px;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.price__list {
+  @include clean-list;
+  width: auto;
+  padding: 0 14px;
+}
+
+.price__image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.price__time {
+  width: 214px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $green;
+
+  span {
+    margin-left: 69px;
+    font-weight: 600;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.feature__list {
+  @include clean-list;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  br {
+    display: none;
+  }
+}
+
+.price__item:not(:last-child) {
+  margin-bottom: 74px;
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    position: relative;
+    max-width: none;
+    width: 640px;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -269px;
+      right: 242px;
+      z-index: -1;
+      width: 2px;
+      height: 1868px;
+      background-color: $grey;
+    }
+  }
+
+  .price__delimiter {
+    margin-bottom: 70px;
+  }
+
+  .price__title {
+    border-bottom: 116px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .price__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 210px;
+  }
+
+  .price__item:first-child {
+    width: 240px;
+    margin: 0;
+    margin-top: 102px;
+
+    & .price__time {
+      width: 192px;
+
+      span {
+        margin-left: 62px;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    & .feature__list {
+      width: 224px;
+      margin: 0 auto;
+    }
+  }
+
+  .price__item:nth-child(3n-1) {
+    width: 186px;
+    margin: 0;
+
+    & .price__time {
+      width: 170px;
+
+      span {
+        margin-left: 40px;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .price__item:last-child {
+    width: 182px;
+    margin-top: 118px;
+
+    & .price__image {
+      margin-bottom: 10px;
+    }
+
+    & .price__time {
+      width: 158px;
+
+      span {
+        margin-left: 37px;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .price__image {
+    width: auto;
+    display: flex;
+  }
+
+  .price__time {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .feature__list {
+    line-height: 18px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price {
+    width: 1108px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -662px;
+      right: 382px;
+      height: 2810px;
+    }
+  }
+
+  .price__delimiter {
+    margin-bottom: 106px;
+  }
+
+  .price__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 200px;
+  }
+
+  .price__list {
+    margin-bottom: 118px;
+  }
+
+  .price__time {
+    font-size: 24px;
+  }
+
+  .price__item:first-child {
+    width: 414px;
+    margin-top: 172px;
+
+    & .price__image {
+      margin-bottom: 38px;
+    }
+
+    & .price__time {
+      width: 256px;
+      margin-bottom: 30px;
+
+      span {
+        margin-left: 105px;
+        line-height: 30px;
+
+        span {
+          margin-left: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .feature__list {
+      width: auto;
+    }
+  }
+
+  .price__item:nth-child(3n-1) {
+    width: 316px;
+
+    & .price__image {
+      margin-bottom: 50px;
+    }
+
+    & .price__time {
+      width: 222px;
+      margin-bottom: 30px;
+
+      span {
+        margin-left: 71px;
+        line-height: 30px;
+
+        span {
+          margin-left: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .feature__list {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .price__item:last-child {
+    width: 316px;
+    margin-top: 202px;
+
+    & .price__image {
+      margin-bottom: 38px;
+    }
+
+    & .price__time {
+      width: 208px;
+      margin-bottom: 20px;
+
+      span {
+        margin-left: 67px;
+        line-height: 30px;
+
+        span {
+          margin-left: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .feature__list {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .feature__list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

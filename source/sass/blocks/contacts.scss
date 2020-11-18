@@ -1,0 +1,130 @@
+.contacts {
+  p {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+  }
+}
+
+.contacts__delimiter {
+  margin-bottom: 30px;
+}
+
+.contacts__title {
+  @include clean;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contacts__stripes {
+  width: 2px;
+  height: 18px;
+  margin-left: 10px;
+  margin-right: 20px;
+  background-color: $green;
+  transform: skewX(-15deg);
+  box-shadow: 6px 0 0 0 $green, 12px 0 0 0 $green;
+}
+
+.contacts__skype {
+  @include clean;
+  margin-bottom: 22px;
+}
+
+.contacts__mail {
+  @include clean;
+  margin-bottom: 22px;
+}
+
+.contacts__phone {
+  @include clean;
+  margin-bottom: 40px;
+}
+
+.contacts__social {
+  margin: 0 auto;
+  margin-bottom: 86px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__delimiter {
+    margin-bottom: 70px;
+  }
+
+  .contacts__title {
+    margin-bottom: 84px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .contacts {
+    p {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .contacts__skype {
+    margin-bottom: 30px;
+  }
+
+  .contacts__mail {
+    margin-bottom: 30px;
+  }
+
+  .contacts__phone {
+    margin-bottom: 56px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    p {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  .contacts__delimiter {
+    margin-bottom: 108px;
+  }
+
+  .contacts__title {
+    margin-bottom: 114px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .contacts__wrap {
+    display: flex;
+    width: 1016px;
+    margin: 0 auto;
+    margin-bottom: 72px;
+  }
+
+  .contacts__skype {
+    margin-bottom: 0;
+    margin-right: 82px;
+  }
+
+  .contacts__mail {
+    margin-bottom: 0;
+    margin-right: 88px;
+  }
+
+  .contacts__phone {
+    margin-bottom: 0;
+  }
+}
+
+
+
+

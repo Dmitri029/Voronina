@@ -1,0 +1,144 @@
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__toggle {
+  z-index: 11;
+  width: 25px;
+  height: 14px;
+  padding: 0;
+  margin-right: 16px;
+  background-image: url('../img/menu-open.png');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__tel {
+  z-index: 3;
+  display: none;
+}
+
+.page-header--closed .main-nav {
+  display: none;
+}
+
+.page-header--opened .page-header__toggle {
+  width: 16px;
+  height: 15px;
+  background-image: url('../img/menu-close.png');
+}
+
+.page-header--opened .main-nav {
+  display: block;
+}
+
+.page-header--opened .site-list {
+  position: absolute;
+  z-index: 10;
+  top: -33px;
+  left: 0;
+}
+
+.page-header--nojs .page-header__toggle {
+  display: none;
+}
+
+.page-header--nojs .main-nav {
+  display: block;
+}
+
+.page-header__logo-image {
+  display: flex;
+}
+
+.page-header__logo {
+  z-index: 11;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+    width: 764px;
+    margin: 0 auto;
+    background-color: $grey;
+  }
+
+  .page-header--opened .site-list {
+    top: -60px;
+  }
+
+  .page-header--opened .page-header__toggle {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    margin-right: 0;
+  }
+
+  .page-header__wrapper {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .page-header__logo-image {
+    width: 200px;
+    height: 60px;
+  }
+
+  .page-header__logo {
+    margin-right: 114px;
+  }
+
+  .page-header__toggle {
+    margin-right: 166px;
+    background-image: url('../img/menu-open-tablet.png');
+  }
+
+  .page-header__tel {
+    display: block;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .page-header__wrapper {
+    margin: 0;
+  }
+
+  .page-header--closed .main-nav {
+    display: block;
+  }
+
+  .page-header__logo-image {
+    width: 254px;
+    height: 76px;
+  }
+
+  .page-header__logo {
+    align-self: flex-start;
+    margin-right: 82px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__tel {
+    position: absolute;
+    top: 40px;
+    right: 396px;
+  }
+}

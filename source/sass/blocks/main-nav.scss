@@ -1,0 +1,19 @@
+.main-nav {
+  position: relative;
+  width: 322px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 764px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: block;
+    width: auto;
+    margin: 0;
+  }
+}

@@ -1,0 +1,307 @@
+.about-me {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.about-me__delimiter {
+  margin-bottom: 36px;
+}
+
+.about-me__title {
+  @include clean;
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.about-me__wrap-image {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 344px;
+  margin-bottom: 30px;
+}
+
+.about-me__image-left {
+  width: 52%;
+  height: 306px;
+  background-image: url('../img/photo-left.jpg');
+  background-size: cover;
+}
+
+.about-me__image-right {
+  width: 45%;
+  height: 306px;
+  margin-top: 36px;
+  background-image: url('../img/photo-right.jpg');
+  background-size: cover;
+}
+
+.about-me__desk {
+  @include clean;
+  width: 269px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.about-me__desk-desktop {
+  display: none;
+}
+
+.about-me__wrap-contacts {
+ text-align: center;
+}
+
+.about-me__tel {
+  @include clean;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.about-me__mail {
+  @include clean;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.about-me__link {
+  display: flex;
+  align-items: center;
+  width: 192px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  color: $black;
+  border-bottom: 2px solid $black;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  span {
+    width: 26px;
+    height: 2px;
+    margin-left: 10px;
+    background-color: $black;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-me {
+    position: relative;
+    max-width: none;
+    width: 640px;
+    margin-bottom: 144px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -210px;
+      left: 0;
+      z-index: -1;
+      width: 2px;
+      height: 2732px;
+      background-color: $grey;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -210px;
+      right: 0;
+      z-index: -1;
+      width: 2px;
+      height: 2732px;
+      background-color: $grey;
+    }
+  }
+
+  .about-me__delimiter {
+    margin-bottom: 72px;
+  }
+
+  .about-me__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 62px;
+  }
+
+  .about-me__wrap-image {
+    height: 466px;
+  }
+
+  .about-me__image-left {
+    width: 48%;
+    height: 418px;
+    background-image: url('../img/photo-left-tablet.jpg');
+  }
+
+  .about-me__image-right {
+    width: 48%;
+    height: 418px;
+    margin-top: 48px;
+    background-image: url('../img/photo-right-tablet.jpg');
+  }
+
+  .about-me__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-me__wrap-desk {
+    width: 48%;
+    padding-left: 14px;
+  }
+
+  .about-me__wrap-contacts {
+    width: 48%;
+    text-align: left;
+  }
+
+  .about-me__desk {
+    width: 278px;
+    margin: 0;
+    margin-top: -48px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .about-me__tel {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .about-me__mail {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .about-me__link {
+    width: 214px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-me {
+    width: 1108px;
+    margin-bottom: 176px;
+
+    &::before {
+      height: 3208px;
+    }
+
+    &::after {
+      height: 3208px;
+    }
+  }
+
+  .about-me__delimiter {
+    margin-bottom: 105px;
+  }
+
+  .about-me__title {
+    margin-bottom: 100px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .about-me__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 78px;
+      right: 0;
+      z-index: -1;
+      width: 646px;
+      height: 482px;
+      background-color: $grey;
+    }
+  }
+
+  .about-me__wrap-image {
+    width: 664px;
+    height: 480px;
+    margin-right: 54px;
+    margin-bottom: 0;
+  }
+
+  .about-me__image-left {
+    width: 315px;
+    height: 430px;
+    background-image: url('../img/photo-left-desktop.jpg');
+  }
+
+  .about-me__image-right {
+    width: 315px;
+    height: 430px;
+    margin-top: 50px;
+    background-image: url('../img/photo-right-desktop.jpg');
+  }
+
+  .about-me__wrap {
+    display: block;
+    width: 314px;
+    padding-top: 138px;
+  }
+
+  .about-me__wrap-desk {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .about-me__wrap-contacts {
+    width: auto;
+  }
+
+  .about-me__desk {
+    width: auto;
+    margin: 0;
+    margin-bottom: 33px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about-me__tel {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about-me__mail {
+    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about-me__desk-desktop {
+    @include clean;
+    display: block;
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about-me__link {
+    width: 220px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
